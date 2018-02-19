@@ -2,6 +2,12 @@
 //exercises
 
 function yearOfBirth(age) {
+  try {
+    age < 0;
+  }
+  catch(e) {
+    console.log("Age can not be negative");
+    }
   return 2018 - age;
 }
 
