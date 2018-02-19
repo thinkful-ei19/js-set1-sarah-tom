@@ -3,13 +3,27 @@
 
 function yearOfBirth(age) {
   try {
-    age < 0;
-  }
+    if(age < 0) {
+      throw new Error("Age cannot be negative");
+    } return 2018 - age;
+  } 
   catch(e) {
-    console.log("Age can not be negative");
-    }
-  return 2018 - age;
+    console.log(e);
+  }
 }
+
+/*function isNegative(yearOfBirth(age)) {
+  throw {
+    message: "Age can not be negative",
+    name: "FatalException",
+    toString: function() {
+      return `${this.name}: ${this.message}`;
+    }
+  }
+}
+*/
+
+
 
 function whoAmI(name, age) {
   let yob = yearOfBirth(age);
@@ -17,7 +31,7 @@ function whoAmI(name, age) {
   console.log(`I was born in ${yob}`)
 }
 
-whoAmI('Sarah', -33);
-
+whoAmI('Sarah', 33);
+yearOfBirth(24);
 
 
