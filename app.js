@@ -11,7 +11,7 @@ function whoAmI(name, age) {
   console.log(`I was born in ${yob}`)
 }
 
-whoAmI('Sarah', 33);
+whoAmI('Sarah', -33);
 
 
 
